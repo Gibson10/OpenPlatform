@@ -8,7 +8,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux'
 import bgImage from '../assets/shopping1.jpg';
 import logo from '../assets/shopping.png';
-// import { addUser } from './redux/actions/addUser';
+import { addUser } from './redux/actions/addUser';
 const { width: WIDTH } = Dimensions.get('window');
 
 
@@ -103,14 +103,14 @@ render() {
 }
 
 
-function mapDispatchToProps(dispatch,name) {
-return {
-  addUser: (user) => dispatch({ type: 'ADD_USER', payload: user } )
-}
+// function mapDispatchToProps(dispatch,name) {
+// return {
+//   addUser: (user) => dispatch({ type: 'ADD_USER', payload: user } )
+// }
 
-}
+// }
 
-export default connect(null,mapDispatchToProps) (LoginScreen)
+export default connect(null,addUser) (LoginScreen)
 const styles = StyleSheet.create({
   container: {
     paddingTop: 50,
