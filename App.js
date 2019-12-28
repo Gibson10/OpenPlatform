@@ -4,21 +4,21 @@ import Navigation from './screens/navigation';
 import {createStore} from 'redux';
 import {Provider} from 'react-redux';
 import AsyncStorage from '@react-native-community/async-storage';
-// import store from './screens/redux/store';
+import store from './screens/redux/store';
 
-const initialState = {
-  user: {},
-};
-const reducer = (state = initialState, action) => {
-  switch (action.type) {
-    case 'ADD_USER':
-      return {user: action.payload};
-  }
+// const initialState = {
+//   user: {},
+// };
+// const reducer = (state = initialState, action) => {
+//   switch (action.type) {
+//     case 'ADD_USER':
+//       return {user: action.payload};
+//   }
 
-  return state;
-};
+//   return state;
+// };
 
-const store = createStore(reducer);
+// const store = createStore(reducer);
 
 export default class App extends Component {
   constructor(props) {
